@@ -7,17 +7,14 @@ export function Header() {
   return (
     <header className="border-b">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center space-x-2">
+        <Link to="/SilkWork" className="flex items-center space-x-2">
           <FileText className="h-6 w-6 text-blue-600" />
           <span className="text-xl font-bold">ResumeAI</span>
         </Link>
         <nav className="flex items-center space-x-6">
-          <Link to="/builder" className="text-gray-600 hover:text-gray-900">
-            Builder
+          <Link to="/SilkWork/builder" className="text-gray-600 hover:text-gray-900">
+          Create Resume
           </Link>
-          <Button as={Link} to="/builder" variant="primary">
-            Create Resume
-          </Button>
         </nav>
       </div>
     </header>

@@ -10,8 +10,8 @@ function App() {
       <div className="min-h-screen bg-gray-50">
         <Header />
         <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/builder" element={<Builder />} />
+          <Route path="/SilkWorkUI" element={<Landing />} />
+          <Route path="/SilkWorkUI/builder" element={<Builder />} />
         </Routes>
       </div>
     </BrowserRouter>

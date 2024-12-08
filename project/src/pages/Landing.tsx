@@ -28,7 +28,7 @@ export function Landing() {
               </p>
               <Button
                 as={Link}
-                to="/builder"
+                to="/SilkWorkUI/builder"
                 size="lg"
                 className="inline-flex items-center"
               >
@@ -69,7 +69,7 @@ export function Landing() {
             </p>
             <Button
               as={Link}
-              to="/builder"
+              to="/SilkWorkUI/builder"
               variant="outline"
               size="lg"
               className="bg-white"
