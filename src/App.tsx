@@ -1,21 +1,26 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Header } from './components/Header';
-import { Landing } from './pages/Landing';
-import { Builder } from './pages/Builder';
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Index from "./pages/Index";
+import Builder from "./pages/Builder";
 
-function App() {
-  return (
-    <BrowserRouter>
-      <div className="min-h-screen bg-gray-50">
-        <Header />
+const queryClient = new QueryClient();
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
         <Routes>
-          <Route path="/SilkWorkUI" element={<Landing />} />
+          <Route path="/SilkWorkUI" element={<Index />} />
           <Route path="/SilkWorkUI/builder" element={<Builder />} />
         </Routes>
-      </div>
-    </BrowserRouter>
-  );
-}
+      </BrowserRouter>
+    </TooltipProvider>
+  </QueryClientProvider>
+);
 
 export default App;
