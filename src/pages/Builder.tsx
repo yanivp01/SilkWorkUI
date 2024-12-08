@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Save, Plus, Trash2 } from 'lucide-react';
 import { Button } from '../components/Button';
 import { FormSection } from '../components/FormSection';
-import { SkillProficiency } from '../components/SkillProficiency';
+import { SkillProficiency } from '../components/SkillProficiency.tsx';
 import { generatePDF } from '../utils/pdfGenerator';
 import type { ResumeData } from '../types/resume';
 
